@@ -9,7 +9,7 @@ function getTodayKey() {
 
 // Display the quote and author in the HTML
 function displayQuote(quoteData) {
-  let cleanQuote = quoteData.q.trim();
+    let cleanQuote = quoteData.q.trim();
     cleanQuote = cleanQuote.replace(/\n/g, '<br>');
 
     const cleanAuthor = quoteData.a.trim();
@@ -17,7 +17,7 @@ function displayQuote(quoteData) {
     document.getElementById("quote").innerHTML = `"${cleanQuote}"`;
     document.getElementById("author").textContent = `${cleanAuthor}`;
 
-    console.log(`"${quoteData.q}" — ${quoteData.a}`);
+    // console.log(`"${quoteData.q}" — ${quoteData.a}`);
 }
 
 // Main function: fetch quote or use saved one
@@ -40,7 +40,7 @@ async function getquote() {
     localStorage.setItem(todayKey, JSON.stringify(quoteData));
     displayQuote(quoteData);
     } catch (error) {
-    console.error("Couldn't fetch quote:", error);
+    // console.error("Couldn't fetch quote:", error);
     document.getElementById("quote").textContent = "Couldn't fetch quote";
     document.getElementById("author").textContent = "";
     }
