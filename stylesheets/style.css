@@ -73,16 +73,16 @@ body {
     position: relative;
 }
 
-.quote-box span::after {
+/* .quote-box span::before {
     content: '';
     width: 1rem;
     height: 0.1rem;
     background-color: hsl(240, 100%, 50%);
     position: absolute;
-    float: center;
+    float: left;
     top: 50%;
-    right: 24.25rem;
-}
+    left: 16.5rem;
+} */
 
 #author {
     font-style: italic;
