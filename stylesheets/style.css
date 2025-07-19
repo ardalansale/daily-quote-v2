@@ -43,13 +43,15 @@ a:not([class]) {
 /* --- */
 
 body {
-    /* background-color: hsl(210, 73%, 94%); */
     background-color: hsl(51, 52%, 95%);
     font-family: "Faculty Glyphic", sans-serif;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
 }
 
 .quote-box {
-    width: 44rem;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -68,25 +70,24 @@ body {
 .quote-box span {
     display: block;
     margin-top: 1rem;
-    /* float: right; */
     float: center;
     position: relative;
 }
 
-/* .quote-box span::before {
-    content: '';
-    width: 1rem;
-    height: 0.1rem;
-    background-color: hsl(240, 100%, 50%);
-    position: absolute;
-    float: left;
-    top: 50%;
-    left: 16.5rem;
-} */
-
-#author {
+#author { 
     font-style: italic;
     color: rgb(95, 95, 95);
+    position: relative;
+    display: inline-block;
+}
+
+#author::before { /* Horizontal line above Author */
+    content: "";
+    display: block;
+    height: 1px;
+    background: #55a4ff;
+    width: 75%;
+    margin: 0 auto 0.5rem auto;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -102,5 +103,8 @@ body {
     }
     #author {
         color: rgb(210, 210, 210);
+    }
+    #author::before { /* Horizontal line above Author */
+    background: #a7d0ff;
     }
 }
